@@ -7,7 +7,7 @@ while :; do
 echo "正在检查是否有可用配送时段..."
 
 # (*)请填充cURL命令,别忘记输出到tmp.json
-  curl https://maicai.api.ddxq.mobi/order/getMultiReserveTime > tmp.json
+  curl "https://maicai.api.ddxq.mobi/order/getMultiReserveTime" > tmp.json
 
 responseCodeCheck=`cat tmp.json | jq -r '.code'`
 
